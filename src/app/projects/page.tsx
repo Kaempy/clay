@@ -66,7 +66,7 @@ const Projects = () => {
             className="gap-3 flex flex-col justify-center w-full"
           >
             <Image
-              src={img1}
+              src={item.img}
               alt="happy workers"
               width={605}
               height={350}
