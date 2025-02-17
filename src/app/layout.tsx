@@ -1,7 +1,9 @@
 import Layout from '@src/layout';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import { Suspense } from 'react';
 import './globals.css';
+import Loading from './loading';
 
 // Define local font
 const aeonik = localFont({
@@ -63,7 +65,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${aeonik.variable} antialiased`}>
-        <Layout>{children}</Layout>
+        <Suspense fallback={<Loading />}>
+          <Layout>{children}</Layout>
+        </Suspense>
       </body>
     </html>
   );
