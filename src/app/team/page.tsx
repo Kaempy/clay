@@ -9,13 +9,13 @@ export const metadata: Metadata = {
 
 const Team = () => {
   return (
-    <main className="bg-texture  w-full h-full bg-primary bg-[50%,50%] min-h-screen">
-      <p className="flex items-center px-6 pt-24 lg:px-16 lg:pt-32 lg:pb-8 pb-4">
+    <main className="bg-texture px-6 md:px-[6.25rem] lg:px-6 xl:px-[6.25rem]   w-full h-full bg-primary bg-[50%,50%] min-h-screen">
+      <p className="flex items-center pt-24 lg:pt-32 lg:pb-8 pb-4">
         <Luna />
-        <span className="text-base leading-4 italic">THE TEAM</span>
+        <span className="text-base leading-[15px] italic">THE TEAM</span>
       </p>
-      <section className="relative px-8 lg:px-20 w-full">
-        <div className="w-full  max-w-[70rem]">
+      <section className="relative lg:p-8 w-full">
+        <div className="w-full  max-w-[69.9375rem]">
           <p className="lg:text-[2.5rem] text-2xl lg:leading-[2.875rem] font-medium">
             By working together creatively from the start of a project, our team
             combines their knowledge to devise integrated, sustainable design
@@ -23,7 +23,7 @@ const Team = () => {
           </p>
         </div>
       </section>
-      <div className="px-6 py-12 lg:p-20 mx-auto">
+      <div className="py-12 mx-auto">
         <Image
           src={img}
           alt="happy workers"

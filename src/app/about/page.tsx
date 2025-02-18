@@ -58,12 +58,12 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-    <main className="bg-texture  w-full h-full bg-primary bg-[50%,50%] min-h-screen">
-      <p className="flex items-center px-6 lg:px-16 pt-28 lg:pt-32 pb-4 lg:pb-8">
+    <main className="bg-texture w-full h-full bg-primary bg-[50%,50%] min-h-screen">
+      <p className="flex items-center md:px-[6.25rem] lg:px-6 xl:px-[6.25rem] p-6 pt-20 lg:pt-32 pb-4 lg:pb-8">
         <Luna />
-        <span className="text-base leading-4 italic">ABOUT CLAY</span>
+        <span className="text-base leading-[.9375rem] italic">ABOUT CLAY</span>
       </p>
-      <section className="relative px-6 lg:px-20 w-full h-[200px] lg:h-[389px]">
+      <section className="relative md:px-[6.25rem] lg:px-6 xl:px-[6.25rem] p-6 w-full h-[12.5rem] lg:h-[24.3125rem]">
         <Image
           src={clay}
           alt="clay"
@@ -73,18 +73,22 @@ const About = () => {
           placeholder="blur"
           className="absolute"
         />
-        <div className="absolute top-8 lg:top-16 max-w-[58rem]">
-          <p className="text-primary-light text-base leading-4">VISION</p>
-          <p className="lg:text-[2.5rem] text-2xl lg:leading-[2.875rem] font-medium">
+        <div className="absolute top-8 lg:px-8 lg:top-16 max-w-[928px]">
+          <p className="text-primary-light text-base leading-[.9375rem]">
+            VISION
+          </p>
+          <p className="lg:text-[40px] text-2xl lg:leading-[46px] font-medium">
             To design & build timeless, modern, and sustainable homes that set
             new standards for luxury and enduring quality.
           </p>
         </div>
       </section>
-      <div className="flex px-6 lg:px-20 items-center justify-end">
-        <div className="w-full  max-w-[58rem]">
-          <p className="text-primary-light text-base leading-4">MISSION</p>
-          <p className="lg:text-[2.5rem] text-2xl lg:leading-[2.875rem] font-medium">
+      <div className="flex md:px-[6.25rem] lg:px-6 xl:px-[6.25rem] p-6 items-center justify-end">
+        <div className="w-full  max-w-[928px]">
+          <p className="text-primary-light text-base leading-[.9375rem]">
+            MISSION
+          </p>
+          <p className="lg:text-[40px] text-2xl lg:leading-[46px] font-medium">
             Clay is dedicated to creating luxurious, sustainable properties that
             combine design and modern innovation to elevate living experiences
             while bringing us closer to nature.
@@ -93,17 +97,18 @@ const About = () => {
       </div>
       <div className="flex items-center justify-center my-16 gap-1">
         {imgSlides.map((item, i) => (
-          <Image
-            key={i}
-            src={item}
-            alt={`slide ${i}`}
-            className="object-contain aspect-auto overflow-hidden"
-            placeholder="blur"
-          />
+          <div key={i} className="overflow-hidden">
+            <Image
+              src={item}
+              alt={`slide ${i}`}
+              className="object-cover aspect-auto transition-transform duration-300 ease-in-out hover:scale-105"
+              placeholder="blur"
+            />
+          </div>
         ))}
       </div>
-      <div className=" p-6 lg:p-20">
-        <p className="text-primary-light text-base leading-4 mb-12">
+      <div className="md:p-[6.25rem] lg:p-6 xl:p-[6.25rem] p-6">
+        <p className="text-primary-light text-base leading-[.9375rem] mb-12">
           CORE VALUES
         </p>
         <ul>
@@ -111,15 +116,15 @@ const About = () => {
             <li key={value.key}>
               <div className="flex flex-col md:flex-row w-full lg:mb-16 lg:pt-8 border border-white/40 border-x-0 border-b-0 gap-4 mb-8 pt-4 lg:gap-8">
                 <div className="flex w-full items-center gap-3 lg:gap-6">
-                  <p className="lg:text-[1.75rem] text-lg lg:leading-8 font-medium">
+                  <p className="lg:text-[28px] text-lg lg:leading-8 font-medium">
                     {value.key}
                   </p>
-                  <p className="lg:text-[2.5rem] text-2xl lg:leading-[2.875rem] font-medium">
+                  <p className="lg:text-[40px] text-2xl lg:leading-[46px] font-medium">
                     {value.title}
                   </p>
                 </div>
                 <div className="w-full">
-                  <p className="text-primary-light max-w-[34.125rem] text-base lg:leading-[24.1504px] lg:text-[21px]">
+                  <p className="text-primary-light max-w-[546px] text-base lg:leading-[1.5094rem] lg:text-[1.3125rem]">
                     {value.desc}
                   </p>
                 </div>

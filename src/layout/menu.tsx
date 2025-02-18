@@ -35,19 +35,20 @@ const Menu = () => {
   const year = new Date().getFullYear();
   return (
     <main className="xl:grid-cols-2 w-full grid min-h-screen">
-      <section className="relative hidden xl:block w-full h-full">
+      <section className="relative overflow-hidden xl:block w-full h-full">
         <Image
           src={bg}
           alt="bg"
           fill
           quality={90}
           priority
+          className="object-cover aspect-auto transition-transform duration-300 ease-in-out hover:grayscale-[50%]"
           placeholder="blur"
         />
       </section>
-      <section className="bg-texture justify-between relative w-full flex-col h-full bg-primary flex items-start bg-contain min-h-screen px-6 py-20 xl:p-20">
+      <section className="bg-texture justify-between relative w-full flex-col h-full bg-primary flex items-start bg-contain min-h-screen px-6 py-[6.25rem] xl:p-[6.25rem]">
         <nav className="w-full">
-          <p className="text-primary-light text-sm my-6 xl:my-12 leading-4">
+          <p className="text-primary-light text-sm my-6 xl:my-12 leading-[.9375rem]">
             MENU
           </p>
           <ul className="flex gap-4 xl:gap-8 items-start justify-center flex-col">
@@ -55,7 +56,7 @@ const Menu = () => {
               <li key={item.name}>
                 <Link
                   href={item.link}
-                  className="text-white hover:text-primary-light font-medium text-2xl xl:text-[2.5rem] xl:leading-[2.875rem] no-underline"
+                  className="text-white hover:text-primary-light font-medium text-2xl xl:text-[40px] xl:leading-[46px] no-underline"
                 >
                   {item.name}
                 </Link>
@@ -65,12 +66,12 @@ const Menu = () => {
         </nav>
         <footer className="w-full">
           <div className="flex items-end justify-between">
-            <ul className="flex gap-2 w-full max-w-[11.25rem] items-start justify-center flex-col">
+            <ul className="flex gap-2 w-full max-w-[180px] items-start justify-center flex-col">
               {addresses.map((address) => (
                 <li key={address.link}>
                   <Link
                     href={address.link}
-                    className="text-[.6875rem] text-white hover:underline -tracking-tighter uppercase leading-4"
+                    className="text-[11px] text-white hover:underline -tracking-tighter uppercase leading-4"
                   >
                     {address.name}
                   </Link>
@@ -81,29 +82,29 @@ const Menu = () => {
               <li>
                 <Link
                   href="/#"
-                  className="text-[.6875rem] text-white underline -tracking-tighter uppercase leading-4"
+                  className="text-[11px] text-white underline -tracking-tighter uppercase leading-4"
                 >
                   facebook
                 </Link>
               </li>
               <li>
-                <small className="text-[.625rem] uppercase leading-4">•</small>
+                <small className="text-[10px] uppercase leading-4">•</small>
               </li>
               <li>
                 <Link
                   href="/#"
-                  className="text-[.6875rem] text-white underline -tracking-tighter uppercase leading-4"
+                  className="text-[11px] text-white underline -tracking-tighter uppercase leading-4"
                 >
                   instagram
                 </Link>
               </li>
               <li>
-                <small className="text-[.625rem] uppercase leading-4">•</small>
+                <small className="text-[10px] uppercase leading-4">•</small>
               </li>
               <li>
                 <Link
                   href="/#"
-                  className="text-[.6875rem] text-white underline -tracking-tighter uppercase leading-4"
+                  className="text-[11px] text-white underline -tracking-tighter uppercase leading-4"
                 >
                   linkedin
                 </Link>
@@ -112,27 +113,27 @@ const Menu = () => {
           </div>
           <hr className="my-6" />
           <div className="items-center justify-between gap-4 flex">
-            <p className="text-[.6875rem] text-primary-light -tracking-tighter uppercase leading-4">
+            <p className="text-[10px] text-white -tracking-tighter uppercase leading-4">
               © {year} Clay LTD.
             </p>
             <ul className="flex gap-2 items-center justify-center">
               <li>
                 <Link
                   href="/#"
-                  className="text-[.625rem] text-primary-light hover:text-white uppercase leading-4"
+                  className="text-[10px] hover:text-primary-light text-white uppercase leading-4"
                 >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <small className="text-[.625rem] text-primary-light uppercase leading-4">
+                <small className="text-[10px] text-white uppercase leading-4">
                   •
                 </small>
               </li>
               <li>
                 <Link
                   href="/#"
-                  className="text-[.625rem] text-primary-light hover:text-white uppercase leading-4"
+                  className="text-[10px] hover:text-primary-light text-white uppercase leading-4"
                 >
                   Terms & Conditions
                 </Link>

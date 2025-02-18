@@ -64,7 +64,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${aeonik.variable} antialiased`}>
+      <body
+        className={`${aeonik.variable} ${aeonik.className} bg-primary text-white antialiased`}
+      >
         <Suspense fallback={<Loading />}>
           <Layout>{children}</Layout>
         </Suspense>
