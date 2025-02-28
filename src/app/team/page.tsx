@@ -1,7 +1,7 @@
 import Luna from '@src/icons/luna';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import img from '../../../public/img-5.png';
+import img from '../../../public/img-5.jpg';
 
 export const metadata: Metadata = {
   title: 'Team',
